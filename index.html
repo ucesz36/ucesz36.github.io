@@ -1,12 +1,231 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>My Dissertation</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Zhulin Chen | Dissertation Materials</title>
+  <style>
+    :root { --accent:#2563eb; --bg:#f8fafc; --card:#ffffff; --text:#0f172a; --muted:#475569; }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, "Noto Sans", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; color:var(--text); background:var(--bg); line-height:1.6; }
+    header { background:linear-gradient(180deg,#eef2ff, #ffffff); border-bottom:1px solid #e5e7eb; }
+    .container { max-width: 1040px; margin: 0 auto; padding: 28px 20px; }
+    h1 { margin:0 0 6px; font-size: 28px; }
+    h2 { margin:32px 0 12px; font-size: 22px; }
+    p.lead { margin:8px 0 0; color:var(--muted); }
+    nav.toc { margin-top:18px; display:flex; flex-wrap:wrap; gap:10px; }
+    nav.toc a { text-decoration:none; color:#0b57d0; background:#eef2ff; padding:6px 10px; border-radius:8px; border:1px solid #dbeafe; font-size:14px; }
+    .card { background:var(--card); border:1px solid #e5e7eb; border-radius:14px; padding:18px; box-shadow: 0 1px 2px rgba(0,0,0,.04); }
+    .grid { display:grid; gap:16px; }
+    .grid.cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .grid.cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    @media (max-width: 900px){ .grid.cols-3{ grid-template-columns:1fr 1fr } }
+    @media (max-width: 640px){ .grid.cols-2, .grid.cols-3{ grid-template-columns:1fr } }
+    .btn { display:inline-block; padding:10px 14px; background:var(--accent); color:#fff; text-decoration:none; border-radius:10px; font-weight:600; }
+    .btn.secondary { background:#0ea5e9; }
+    .muted { color:var(--muted); font-size: 14px; }
+    figure { margin:0; }
+    figure img { width:100%; height:auto; border-radius:10px; border:1px solid #e5e7eb; }
+    figcaption { margin-top:6px; font-size:14px; color:var(--muted); }
+    ul.files { padding-left:18px; margin:0; }
+    ul.files li { margin:6px 0; }
+    details { border:1px solid #e5e7eb; border-radius:10px; background:#fff; padding:10px 12px; }
+    details summary { cursor:pointer; font-weight:600; }
+    iframe { border:1px solid #e5e7eb; border-radius:8px; background:#fff; }
+    footer { text-align:center; color:var(--muted); font-size:13px; padding:24px 0 40px; }
+    .badge { font-size:12px; padding:2px 8px; border-radius:999px; background:#e2e8f0; color:#334155; margin-left:8px; }
+    .kicker { font-size:12px; letter-spacing:.08em; text-transform:uppercase; color:#6b7280; }
+  </style>
 </head>
 <body>
-  <h1>Welcome to My Dissertation Page</h1>
-  <p>This is a test page for my dissertation. </p>
-  <p>You can put text, tables, images, or links here.</p>
+
+<header>
+  <div class="container">
+    <div class="kicker">Dissertation Materials</div>
+    <h1>Regulatory Shocks and Retail Investor Behaviour in Crypto</h1>
+    <p class="lead">Author: Zhulin Chen · U.S. & U.K. Evidence · Quantitative focus</p>
+    <nav class="toc">
+      <a href="#abstract">Abstract</a>
+      <a href="#downloads">Downloads</a>
+      <a href="#figures">Figures</a>
+      <a href="#csv">CSV Previews</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <!-- Abstract -->
+  <section id="abstract" class="card">
+    <h2>Abstract</h2>
+    <p>
+      This page collects the working materials for my dissertation
+      <em>“Regulatory Shocks and Retail Investor Behaviour in Crypto: Evidence from the U.S. and U.K.”</em>.
+      It includes the main result workbook, chart figures, and CSV outputs for coefficient/p-value time series and
+      holiday-effect (HXC) summaries. All files are downloadable; key figures are embedded below for quick viewing.
+    </p>
+  </section>
+
+  <!-- Downloads -->
+  <section id="downloads" class="card">
+    <h2> Downloads</h2>
+    <p class="muted">Click to download the full workbook and CSV summaries.</p>
+    <ul class="files">
+      <li><a class="btn" href="4.1 arma11_garch11_results_paper(New).xlsx">Excel: ARMA(1,1)-GARCH(1,1) Results</a><span class="badge">XLSX</span></li>
+      <li><a href="4.2 clny_h2_share_summary(new).csv">CLNY H2 Share Summary</a><span class="badge">CSV</span></li>
+      <li><a href="4.3 clny_h3_share_summary(new).csv">CLNY H3 Share Summary</a><span class="badge">CSV</span></li>
+
+      <li><a href="CSI_1000_coef_pval_timeseries.csv">CSI 1000: Coef & p-value time series</a><span class="badge">CSV</span></li>
+      <li><a href="FTSE_China_A50_coef_pval_timeseries.csv">FTSE China A50: Coef & p-value time series</a><span class="badge">CSV</span></li>
+      <li><a href="SSE_100_coef_pval_timeseries.csv">SSE 100: Coef & p-value time series</a><span class="badge">CSV</span></li>
+      <li><a href="SSE_50_coef_pval_timeseries.csv">SSE 50: Coef & p-value time series</a><span class="badge">CSV</span></li>
+      <li><a href="SSE_A_Share_coef_pval_timeseries.csv">SSE A-Share: Coef & p-value time series</a><span class="badge">CSV</span></li>
+      <li><a href="SSE_Composite_coef_pval_timeseries.csv">SSE Composite: Coef & p-value time series</a><span class="badge">CSV</span></li>
+      <li><a href="SZSE_Component_coef_pval_timeseries.csv">SZSE Component: Coef & p-value time series</a><span class="badge">CSV</span></li>
+    </ul>
+  </section>
+
+  <!-- Figures -->
+  <section id="figures" class="card">
+    <h2> Figures (PNG)</h2>
+    <p class="muted">Key plots for holiday-effect (HXC) and rolling coefficients.</p>
+
+    <h3>CSI 1000</h3>
+    <div class="grid cols-3">
+      <figure>
+        <img src="CSI_1000_hxc_only.png" alt="CSI 1000 HXC only">
+        <figcaption>CSI 1000 — HXC only</figcaption>
+      </figure>
+      <figure>
+        <img src="CSI_1000_rolling_coef.png" alt="CSI 1000 rolling coefficient">
+        <figcaption>CSI 1000 — Rolling coefficient</figcaption>
+      </figure>
+    </div>
+
+    <h3>FTSE China A50</h3>
+    <div class="grid cols-3">
+      <figure>
+        <img src="FTSE_China_A50_hxc_only.png" alt="FTSE China A50 HXC only">
+        <figcaption>FTSE China A50 — HXC only</figcaption>
+      </figure>
+      <figure>
+        <img src="FTSE_China_A50_rolling_coef.png" alt="FTSE China A50 rolling coefficient">
+        <figcaption>FTSE China A50 — Rolling coefficient</figcaption>
+      </figure>
+    </div>
+
+    <h3>SSE 100</h3>
+    <div class="grid cols-3">
+      <figure>
+        <img src="SSE_100_hxc_only.png" alt="SSE 100 HXC only">
+        <figcaption>SSE 100 — HXC only</figcaption>
+      </figure>
+      <figure>
+        <img src="SSE_100_rolling_coef.png" alt="SSE 100 rolling coefficient">
+        <figcaption>SSE 100 — Rolling coefficient</figcaption>
+      </figure>
+    </div>
+
+    <h3>SSE 50</h3>
+    <div class="grid cols-3">
+      <figure>
+        <img src="SSE_50_hxc_only.png" alt="SSE 50 HXC only">
+        <figcaption>SSE 50 — HXC only</figcaption>
+      </figure>
+      <figure>
+        <img src="SSE_50_rolling_coef.png" alt="SSE 50 rolling coefficient">
+        <figcaption>SSE 50 — Rolling coefficient</figcaption>
+      </figure>
+    </div>
+
+    <h3>SSE A-Share</h3>
+    <div class="grid cols-3">
+      <figure>
+        <img src="SSE_A_Share_hxc_only.png" alt="SSE A Share HXC only">
+        <figcaption>SSE A-Share — HXC only</figcaption>
+      </figure>
+      <figure>
+        <img src="SSE_A_Share_rolling_coef.png" alt="SSE A Share rolling coefficient">
+        <figcaption>SSE A-Share — Rolling coefficient</figcaption>
+      </figure>
+    </div>
+
+    <h3>SSE Composite</h3>
+    <div class="grid cols-3">
+      <figure>
+        <img src="SSE_Composite_hxc_only.png" alt="SSE Composite HXC only">
+        <figcaption>SSE Composite — HXC only</figcaption>
+      </figure>
+      <figure>
+        <img src="SSE_Composite_rolling_coef.png" alt="SSE Composite rolling coefficient">
+        <figcaption>SSE Composite — Rolling coefficient</figcaption>
+      </figure>
+    </div>
+
+    <h3>SZSE Component</h3>
+    <div class="grid cols-3">
+      <figure>
+        <img src="SZSE_Component_hxc_only.png" alt="SZSE Component HXC only">
+        <figcaption>SZSE Component — HXC only</figcaption>
+      </figure>
+      <figure>
+        <img src="SZSE_Component_rolling_coef.png" alt="SZSE Component rolling coefficient">
+        <figcaption>SZSE Component — Rolling coefficient</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- CSV previews -->
+  <section id="csv" class="card">
+    <h2>🧾 CSV Previews</h2>
+    <p class="muted">Quick inline previews (open to view). For full analysis, download from the links above.</p>
+
+    <details>
+      <summary>CSI_1000_coef_pval_timeseries.csv</summary>
+      <iframe src="CSI_1000_coef_pval_timeseries.csv" width="100%" height="300"></iframe>
+    </details>
+
+    <details>
+      <summary>FTSE_China_A50_coef_pval_timeseries.csv</summary>
+      <iframe src="FTSE_China_A50_coef_pval_timeseries.csv" width="100%" height="300"></iframe>
+    </details>
+
+    <details>
+      <summary>SSE_100_coef_pval_timeseries.csv</summary>
+      <iframe src="SSE_100_coef_pval_timeseries.csv" width="100%" height="300"></iframe>
+    </details>
+
+    <details>
+      <summary>SSE_50_coef_pval_timeseries.csv</summary>
+      <iframe src="SSE_50_coef_pval_timeseries.csv" width="100%" height="300"></iframe>
+    </details>
+
+    <details>
+      <summary>SSE_A_Share_coef_pval_timeseries.csv</summary>
+      <iframe src="SSE_A_Share_coef_pval_timeseries.csv" width="100%" height="300"></iframe>
+    </details>
+
+    <details>
+      <summary>SSE_Composite_coef_pval_timeseries.csv</summary>
+      <iframe src="SSE_Composite_coef_pval_timeseries.csv" width="100%" height="300"></iframe>
+    </details>
+
+    <details>
+      <summary>SZSE_Component_coef_pval_timeseries.csv</summary>
+      <iframe src="SZSE_Component_coef_pval_timeseries.csv" width="100%" height="300"></iframe>
+    </details>
+
+    <details>
+      <summary>CLNY H2/H3 Share Summaries</summary>
+      <iframe src="4.2 clny_h2_share_summary(new).csv" width="100%" height="260"></iframe>
+      <br />
+      <iframe src="4.3 clny_h3_share_summary(new).csv" width="100%" height="260"></iframe>
+    </details>
+  </section>
+</main>
+
+<footer>
+  Last updated automatically by GitHub Pages after each commit.
+</footer>
+
 </body>
 </html>
